@@ -21,7 +21,7 @@
         </if>
     </select>
 
-    <resultMap id="UserMap" type="User">
+    <resultMap id="ProductMap" type="User">
         <result property="productId" column="productid" />
         <result property="productNm" column="productnm" />
         <result property="cateName" column="catename" />
