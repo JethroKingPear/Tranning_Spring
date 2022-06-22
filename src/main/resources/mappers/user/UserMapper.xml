@@ -21,6 +21,30 @@
         </if>
     </select>
 
+    <select id="findUserById"  resultMap="UserMap">
+        select 
+        * 
+        from
+        user
+        where 
+        userid = #{userId}
+    </select>
+
+    <insert id="createNewUser" parameterType="User">
+        INSERT INTO `user`(
+            `userName`,
+            `age`,
+            `address`,
+            `password`
+        )
+        VALUES(
+            #{userNm},
+            #{age},
+            #{address},
+            #{password}
+        )
+    </insert>
+
     <resultMap id="ProductMap" type="User">
         <result property="productId" column="productid" />
         <result property="productNm" column="productnm" />

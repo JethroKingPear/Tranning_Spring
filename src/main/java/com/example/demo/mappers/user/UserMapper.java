@@ -15,4 +15,8 @@ public interface UserMapper {
     List<User> searchAllUser(HashMap request) ;
 
     List<Product> searchAllProduct();
+
+    User findUserById(String userId); 
+
+    int createNewUser(User request);
 }
